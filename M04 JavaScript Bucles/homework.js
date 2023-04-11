@@ -60,7 +60,7 @@ function saludo(idioma) {
          return 'Hello!'
          break;
       default:
-         return 'Hola'
+         return 'Hola!'
    }
 }
 
@@ -120,8 +120,8 @@ function esEntero(num) {
    // Ejemplo: (-10) ---> true
    // De lo contrario, retorna false.
    // Tu código:
-   if (num > 0 || num < 0 || num === 0) {
-      return true;
+   if (num % 1 === 0) {
+      return  true;
    } else {
       return false;
    }
@@ -133,12 +133,12 @@ function fizzBuzz(num) {
    // Si "num" es divisible entre 3 y 5 (ambos), retorna "fizzbuzz".
    // De lo contrario, retorna false.
    // Tu código:
-   if (num % 3 === 0) {
-      return 'fizz';
+   if (num % 3 === 0 && num % 5 === 0) {
+      return "fizzbuzz";
+   } else if (num % 3 === 0) {
+      return "fizz";
    } else if (num % 5 === 0) {
-      return 'buzz';
-   } else if (num % 3 === 0 && num % 5 === 0) {
-      return 'fizzbuzz';
+      return "buzz";
    } else {
       return false;
    }
@@ -187,12 +187,22 @@ function esVerdadero(valor) {
    // Si "valor" es verdadero retornar "Soy verdadero".
    // Caso contrario, retornar "Soy falso".
    // Tu código:
+   if (valor) {
+      return 'Soy verdadero';
+   } else {
+      return 'Soy falso';
+   }
 }
 
 function tieneTresDigitos(num) {
    // Si el número recibido tiene tres dígitos retornar true.
    // Caso contrario, retornar false.
    // Tu código:
+   if (num >= 100 && num <= 999) {
+      return true;
+   } else {
+      return false;
+   }
 }
 
 function doWhile(num) {
@@ -200,6 +210,12 @@ function doWhile(num) {
    // Retornar el valor final.
    // Utilizar el bucle Do-While.
    // Tu código:
+   let i = 0;
+   do {
+      num += 5;
+      i++;
+   } while (i < 8);
+   return num;
 }
 
 /*⚠️ NO MODIFIQUES NADA DEBAJO DE ESTO ⚠️*/
